@@ -47,8 +47,10 @@
 		</table>
 		<div class="buttons">
 		  <a href="${path1 }/GetNoticeListCtrl.do" class="button is-link is-light">목록</a>
-		  <a href="${path1 }/DelNoticeCtrl.do?no=${dto.no }" class="button is-link is-light">글 삭제</a>
-		  <a href="${path1 }/ModifyNoticeCtrl.do?no=${dto.no }" class="button is-link is-light">글 수정</a>
+		  <c:if test='${sid.equals("admin") }'>
+			  <a href="${path1 }/DelNoticeCtrl.do?no=${dto.no }" class="button is-link is-light">글 삭제</a>
+			  <a href="${path1 }/ModifyNoticeCtrl.do?no=${dto.no }" class="button is-link is-light">글 수정</a>
+		  </c:if>
 		</div>
     </div>
   </section>

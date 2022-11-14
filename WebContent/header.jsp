@@ -45,16 +45,33 @@
     </div>
 
     <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>회원가입</strong>
-          </a>
-          <a class="button is-light">
-            로그인
-          </a>
-        </div>
-      </div>
-    </div>
+	  <div class="navbar-item">
+	  	<c:if test="${empty sid }">
+	 <div class="buttons">
+	   <a href="${path2 }/user/agree.jsp" class="button is-primary is-light">
+	     <strong>회원가입</strong>
+	   </a>
+	   <a href="${path2 }/user/login.jsp" class="button is-danger is-light">
+	     로그인
+	   </a>
+	 </div>
+	</c:if>
+	<c:if test="${not empty sid }">
+	 <div class="buttons">
+	   <a href="${path2 }/UserInfoCtrl.do" class="button is-primary is-light">
+	     <strong>회원정보</strong>
+	   </a>
+	   <a href="${path2 }/UserLogoutCtrl.do" class="button is-danger is-light">
+	     로그아웃
+	   </a>
+		<c:if test='${sid.equals("admin")}'>
+		   <a href="${path2 }/AdminCtrl.do" class="button is-danger">
+		     <strong>관리자</strong>
+		   </a>
+		 </c:if>
+	 </div>
+	</c:if>
+  </div>
+</div>
   </div>
 </nav>
