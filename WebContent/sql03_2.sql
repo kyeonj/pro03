@@ -14,3 +14,4 @@ DESC notice;
 DESC test;
 SELECT * FROM notice;
 INSERT INTO notice(title, content) VALUES ("테스트 글1", "테스트 글2 내용입니다.");
+INSERT INTO notice(title, content) VALUES ("테스트 글2", "테스트 글2 내용입니다.");

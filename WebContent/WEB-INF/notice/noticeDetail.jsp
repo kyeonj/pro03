@@ -11,41 +11,44 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>공지사항 목록</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>공지사항 상세보기</title>
+    <jsp:include page="/head.jsp" />
   </head>
   <body>
   <jsp:include page="/header.jsp" />
   <section class="section">
     <div class="container">
-      <h1 class="title">공지사항 목록</h1>
+      <h1 class="title">공지사항 상세보기</h1>
 		<table class="table">
-		  <thead>
-		    <tr>
-		      <th><abbr title="No">No</abbr></th>
-		      <th><abbr title="Title">Title</abbr></th>
-		      <th><abbr title="Result">RegDate</abbr></th>
-		    </tr>
-		  </thead>
 		   <tbody>
-		   <c:forEach items="${list }" var="dto" varStatus="status">
 		    <tr>
-		      <td>${status.count }</td>
-		      <td><a href="${path1 }/GetNoticeCtrl.do?no=${dto.no }">${dto.title }</a></td>
+		      <th>번호</th>
+		      <td>${dto.no }</td>
+		    </tr>
+		    <tr>
+		      <th>제목</th>
+		      <td>${dto.title }</td>
+		    </tr>
+		    <tr>
+		      <th>내용</th>
+		      <td><p>${dto.content }</p></td>
+		    </tr>
+		    <tr> 
+		      <th>작성일</th>
 		      <td>
 		      	<fmt:parseDate value="${dto.regDate }" var="regdate" pattern="yyyy-MM-dd HH:mm:ss" />
 		      	<fmt:formatDate value="${regdate }" pattern="yyyy-MM-dd" />
 		    </tr>
-		    </c:forEach>
-<%-- 		    <c:if test="${list==null }">
 		    <tr>
-		    	<td colspan="3">해당 데이터 목록이 없습니다.</td>
+		      <th>읽은 횟수</th>
+		      <td><p>${dto.visited }</p></td>
 		    </tr>
-		    </c:if> --%>
 		  </tbody>
 		</table>
 		<div class="buttons">
-		  <a href="${path1 }/notice/addNotice.jsp" class="button is-link is-light">글 등록</a>
+		  <a href="${path1 }/GetNoticeListCtrl.do" class="button is-link is-light">목록</a>
+		  <a href="${path1 }/DelNoticeCtrl.do?no=${dto.no }" class="button is-link is-light">글 삭제</a>
+		  <a href="${path1 }/ModifyNoticeCtrl.do?no=${dto.no }" class="button is-link is-light">글 수정</a>
 		</div>
     </div>
   </section>

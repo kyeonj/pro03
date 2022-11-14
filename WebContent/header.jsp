@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="path2" value="${pageContext.request.contextPath }" />  
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="<%=request.getContextPath() %>/">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    <a class="navbar-item" id="logo" href="<%=request.getContextPath() %>/">
+
     </a>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -15,32 +17,28 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item">
-        Home
-      </a>
 
       <a class="navbar-item" href="<%=request.getContextPath() %>/GetNoticeListCtrl.do">
-        Documentation
+       공지사항
       </a>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          More
+          부산에 가면
         </a>
 
         <div class="navbar-dropdown">
           <a class="navbar-item">
-            About
+            명소
           </a>
           <a class="navbar-item">
-            Jobs
+            음식
           </a>
           <a class="navbar-item">
-            Contact
+            쇼핑
           </a>
-          <hr class="navbar-divider">
           <a class="navbar-item">
-            Report an issue
+            축제
           </a>
         </div>
       </div>
@@ -50,10 +48,10 @@
       <div class="navbar-item">
         <div class="buttons">
           <a class="button is-primary">
-            <strong>Sign up</strong>
+            <strong>회원가입</strong>
           </a>
           <a class="button is-light">
-            Log in
+            로그인
           </a>
         </div>
       </div>
