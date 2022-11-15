@@ -2,9 +2,11 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="path2" value="${pageContext.request.contextPath }" />  
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar" style="background-color:aliceblue;" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" id="logo" href="<%=request.getContextPath() %>/">
+    <img src="/data/logo1.png">
+    
 
     </a>
 
@@ -48,24 +50,24 @@
 	  <div class="navbar-item">
 	  	<c:if test="${empty sid }">
 	 <div class="buttons">
-	   <a href="${path2 }/user/agree.jsp" class="button is-primary is-light">
+	   <a href="${path2 }/user/agree.jsp" class="button is-white">
 	     <strong>회원가입</strong>
 	   </a>
-	   <a href="${path2 }/user/login.jsp" class="button is-danger is-light">
+	   <a href="${path2 }/user/login.jsp" class="button is-white">
 	     로그인
 	   </a>
 	 </div>
 	</c:if>
 	<c:if test="${not empty sid }">
 	 <div class="buttons">
-	   <a href="${path2 }/UserInfoCtrl.do" class="button is-primary is-light">
+	   <a href="${path2 }/UserInfoCtrl.do" class="button is-white">
 	     <strong>회원정보</strong>
 	   </a>
-	   <a href="${path2 }/UserLogoutCtrl.do" class="button is-danger is-light">
+	   <a href="${path2 }/UserLogoutCtrl.do" class="button is-white">
 	     로그아웃
 	   </a>
 		<c:if test='${sid.equals("admin")}'>
-		   <a href="${path2 }/AdminCtrl.do" class="button is-danger">
+		   <a href="${path2 }/AdminCtrl.do" class="button is-white">
 		     <strong>관리자</strong>
 		   </a>
 		 </c:if>

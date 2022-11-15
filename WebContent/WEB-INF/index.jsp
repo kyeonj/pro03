@@ -15,7 +15,12 @@
 </head>
 <body>
   	<jsp:include page="${path1 }/header.jsp" />
+  	<div class="con">
 	<h2>${user }테스트 입니다.</h2>
+	<figure class="iimage is-5by3" style="white:50%; height: auto;">
+ 	 <img src="https://bulma.io/images/placeholders/1280x960.png"  >
+	</figure>
+	</div>
 	<jsp:include page="${path1 }/footer.jsp" />
 </body>
 </html>
