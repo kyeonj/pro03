@@ -30,3 +30,4 @@ CREATE TABLE USER(
 	regdate DATETIME DEFAULT NOW()
 );
 desc user;
+select * from user;
