@@ -31,3 +31,22 @@ CREATE TABLE USER(
 );
 desc user;
 select * from user;
+
+CREATE TABLE pic(
+	no INT PRIMARY KEY AUTO_INCREMENT,
+	tourno VARCHAR(20),
+	picname VARCHAR(150)
+);
+ALTER TABLE pic ADD COLUMN pos INT default 1;
+
+select * from pic;
+
+CREATE TABLE tour(
+	no INT PRIMARY KEY AUTO_INCREMENT,
+	tourno VARCHAR(20),	-- 카테고리 타입 - 마지막 레코드의 no+1
+	cate VARCHAR(20),
+	place VARCHAR(100),
+	comment1 VARCHAR(1000),
+	comment2 VARCHAR(1000)  
+);
+SELECT * FROM tour;
