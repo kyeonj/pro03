@@ -37,9 +37,21 @@
 	    </a></li>
 	  </ul>
 	</nav>
-  <section class="section">
+ <section class="section">
     <div class="container">
-      <h1 class="title">장소 상세보기</h1>
+      <h1 class="title">			<c:if test="${cate eq 'A' }">
+			<span>명소</span>
+			</c:if>
+			<c:if test="${cate eq 'B' }">
+			<span>음식</span>
+			</c:if>
+			<c:if test="${cate eq 'C' }">
+			<span>쇼핑</span>
+			</c:if>
+			<c:if test="${cate eq 'D' }">
+			<span>축제</span>
+			</c:if>
+			목록</h1>
       	<div id="con">
       		<div class="tile is-ancestor columns" style="padding-bottom:40px;">
       			<c:if test="${not empty list }">
@@ -75,7 +87,7 @@
 		    	</c:if>
 				<c:if test="${empty list }">
 			      <div class="tile is-parent">
-			        <article class="tile is-child notification is-link is-light">
+			        <article class="tile is-child notification is-link is-light"">
 			          <p class="title">해당 아이템이 존재하지 않습니다.</p>
 			        </article>
 			      </div>

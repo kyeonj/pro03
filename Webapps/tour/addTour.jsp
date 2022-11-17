@@ -117,6 +117,27 @@
 					}
 				}
 				</script>
+				<script>
+				function findAddr() {
+					new daum.Postcode({
+						oncomplete: function(data) {
+							console.log(data);
+							var roadAddr = data.roadAddress;
+							var jibunAddr = data.jibunAddress;
+							document.getElementById("postcode").value = data.zonecode;
+							if(roadAddr !== '') {
+								document.getElementById("address1").value = roadAddr;				
+							} else if(jibunAddr !== ''){
+								document.getElementById("address1").value = jibunAddr;
+							}
+							document.getElementById("address2").focus();
+							return;
+						}
+					}).open();
+				}
+				</script>
+				<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
 			</div>
 		</div>
   </section>

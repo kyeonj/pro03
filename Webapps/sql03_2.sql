@@ -51,3 +51,4 @@ CREATE TABLE tour(
 );
 SELECT * FROM tour;
 drop table tour;
+ALTER TABLE tour ADD COLUMN addr VARCHAR(200);
