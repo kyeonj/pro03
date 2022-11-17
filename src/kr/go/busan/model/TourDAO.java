@@ -111,6 +111,7 @@ public class TourDAO {
 				tour.setTourno(rs.getString("tourno"));
 				tour.setCate(rs.getString("cate"));
 				tour.setPlace(rs.getString("place"));
+				tour.setComment1(rs.getString("comment1"));;
 				tourList.add(tour);
 			}
 		} catch(ClassNotFoundException e){

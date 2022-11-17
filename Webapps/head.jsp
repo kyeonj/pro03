@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <style>
 body, html { font-family: 'Noto Sans KR', sans-serif; }
-.table { min-width:960px; }
+.table { min-width:1200px; }
 #logo { display:block; width:73px; height:67px; background-image:url("./data/logo3.jpg");
 background-size:75% auto; background-repeat:no-repeat; background-position:center center; }
 #gnb .navbar-link::after { content:""; display:none; }

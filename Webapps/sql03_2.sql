@@ -40,7 +40,7 @@ CREATE TABLE pic(
 ALTER TABLE pic ADD COLUMN pos INT default 1;
 
 select * from pic;
-
+drop table pic;
 CREATE TABLE tour(
 	no INT PRIMARY KEY AUTO_INCREMENT,
 	tourno VARCHAR(20),	-- 카테고리 타입 - 마지막 레코드의 no+1
@@ -50,3 +50,4 @@ CREATE TABLE tour(
 	comment2 VARCHAR(1000)  
 );
 SELECT * FROM tour;
+drop table tour;

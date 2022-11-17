@@ -58,7 +58,7 @@
 						<c:if test="${cate eq 'C' }">
 						<span>쇼핑</span>
 						</c:if>
-						<c:if test="${grade eq 'D' }">
+						<c:if test="${cate eq 'D' }">
 						<span>축제</span>
 						</c:if>
 			          </p>
