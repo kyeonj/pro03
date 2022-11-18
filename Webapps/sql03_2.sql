@@ -52,3 +52,17 @@ CREATE TABLE tour(
 SELECT * FROM tour;
 drop table tour;
 ALTER TABLE tour ADD COLUMN addr VARCHAR(200);
+
+--이용후기 테이블
+CREATE TABLE impress(
+	NO INT PRIMARY KEY AUTO_INCREMENT,
+	cate VARCHAR(20),
+	tourno VARCHAR(20),
+	id VARCHAR(30),
+	content VARCHAR(1000),
+	star DOUBLE,
+	imgSrc VARCHAR(150),
+	regdate DATETIME DEFAULT NOW()
+);
+
+DESC impress;

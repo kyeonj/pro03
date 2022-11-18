@@ -10,7 +10,7 @@
 <style>
 body, html { font-family: 'Noto Sans KR', sans-serif; }
 .table { min-width:1200px; }
-#logo { display:block; width:73px; height:67px; background-image:url("./data/logo3.jpg");
+#logo2 { display:block; width:73px; height:67px; background-image:url("./data/logo3.jpg");
 background-size:75% auto; background-repeat:no-repeat; background-position:center center; }
 #nav-group { border-bottom:3px solid #ddd; }
 #gnb .navbar-link::after { content:""; display:none; }

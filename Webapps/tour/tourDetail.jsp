@@ -16,8 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="http://s1.daumcdn.net/svc/attach/U03/cssjs/mapapidoc/1421136453605/service.min.css">
 	<style>
 	body { background:white; }
-#logo { display:block; width:73px; height:67px; background-image:url("./data/logo3.jpg");
-background-size:75% auto; background-repeat:no-repeat; background-position:center center; background-color: aliceblue; }
+
 	</style>	
 	<script type="text/javascript" src="http://dmaps.daum.net/map_js_init/v3.js"></script>
 	<script type="text/javascript" src="http://s1.daumcdn.net/svc/original/U03/cssjs/jquery/jquery-1.11.0.js"></script>	
