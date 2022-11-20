@@ -66,3 +66,18 @@ CREATE TABLE impress(
 );
 
 DESC impress;
+select *from impress;
+
+-- 질문 및 답변
+create table qna(
+    no int primary key auto_increment,
+    title varchar(100) not null,
+    content varchar(1000) not null,
+    author varchar(20) not null,
+    regdate datetime default now(),
+    lev int default 0,            -- 깊이
+    parno INT,          			-- 부모글 번호
+    sec char(1),                 -- 비밀글 여부
+    visited INT DEFAULT 0
+);
+DESC qna;

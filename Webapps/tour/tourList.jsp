@@ -65,14 +65,17 @@
 				<span>축제</span>
 				</c:if>
 		      </td>
-		      <td>
+		     <td>
 		      	<a href="${path1 }/GetTourDetailCtrl.do?no=${dto.no }">${dto.place }</a>
+			  </td>
+			  <td>
+			  	<p class="comment2">${dto.comment2 }</p>
 			  </td>
 		    </tr>
 		    </c:forEach>
 			<c:if test="${empty list }">
 		    <tr>
-		    	<td colspan="3">해당 데이터 목록이 없습니다.</td>
+		    	<td colspan="4">해당 데이터 목록이 없습니다.</td>
 		    </tr>
 		    </c:if>
 		  </tbody>

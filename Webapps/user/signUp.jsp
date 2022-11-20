@@ -46,7 +46,10 @@
 				</tr>
 				<tr>
 					<th>비밀번호</th>
-					<td><input type="password" name="pw" id="pw" placeholder="비밀번호 입력" class="input" required /></td>
+					<td>
+						<input type="password" name="pw" id="pw" placeholder="비밀번호 입력" class="input" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$" maxlength="16" required />
+						<p>비밀번호는 최소 8자리에서 최대 16자리까지 숫자, 영문, 특수문자 각 1개 이상 포함되어야 함</p>
+					</td>
 				</tr>
 				<tr>
 					<th>비밀번호 확인</th>
@@ -80,7 +83,7 @@
 		</table>
 		<div class="btn-group">
 			<input type="submit" name="submit-btn" class="button is-link is-light" value="회원가입">
-			<a href="<%=request.getContextPath() %>/user/login.jsp" class="button is-link is-light"">로그인</a>
+			<a href="<%=request.getContextPath() %>/user/login.jsp" class="button is-link is-light">로그인</a>
 			<input type="reset" name="reset-btn" class="button is-link is-light"" value="취소">
 		</div>
 	</form>	

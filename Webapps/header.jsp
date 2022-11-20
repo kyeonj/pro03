@@ -51,10 +51,25 @@
 				    
 				    </div>
 				</div>
-				<a class="navbar-item" href="<%=request.getContextPath() %>/GetNoticeListCtrl.do">
-     			  공지사항
-    			  </a>
-
+				<div class="navbar-item has-dropdown is-hoverable single">
+			    	<a class="navbar-link">
+				      	유용한 정보
+				    </a>
+					<div class="navbar-dropdown single">
+					     <a class="navbar-item" href="${path2 }/GetNoticeListCtrl.do">
+					       	공지사항
+					     </a>
+					     <a class="navbar-item" href="${path2 }/GetQnaListCtrl.do">
+					       	묻고 답하기
+					     </a>
+					     <a class="navbar-item" href="${path2 }/GetImpressListCtrl.do">
+					       	이용후기
+					     </a>
+					     <a class="navbar-item" href="${path2 }/impress/online.jsp">
+					       	온라인 상담
+					     </a>
+				    </div> 
+				</div>
 			</div>
 			
 			<div class="navbar-end" id="tnb">

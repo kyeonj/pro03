@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import kr.go.busan.dto.PicDTO;
 import kr.go.busan.dto.TourDTO;
 import kr.go.busan.model.TourDAO;
 
