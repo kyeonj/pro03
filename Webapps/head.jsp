@@ -57,5 +57,7 @@ background-repeat:no-repeat; background-position:left center; background-size:10
 #star1:checked ~ #star_group #starrate { width:10px; }
 #star_btn { width:100px; height:36px; position:absolute; z-index:20; top:0; left:0;  }
 #star_btn label { display:block; width:10px; height:36px; position:relative; float:left; }
+.container { display: block; width: 100%; height: auto;}
+
 </style>
 <script src="https://code.jquery.com/jquery-latest.js"></script>

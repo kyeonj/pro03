@@ -1,4 +1,4 @@
-CREATE TABLE test(NAME VARCHAR(50), POINT INT);
+CREATE TABLE test(NAME VARCHAR(50), POINT INT);govermentgovermentgoverment
 INSERT INTO test (name,POINT) VALUES ("김기태",100);
 INSERT INTO test VALUES("가나다",200);
 SELECT * FROM test;
@@ -81,3 +81,5 @@ create table qna(
     visited INT DEFAULT 0
 );
 DESC qna;
+select * from qna;
+drop table qna;
